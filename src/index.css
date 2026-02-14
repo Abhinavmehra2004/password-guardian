@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 35% 7%;
+    --foreground: 210 40% 92%;
+
+    --card: 215 30% 10%;
+    --card-foreground: 210 40% 92%;
+
+    --popover: 215 30% 10%;
+    --popover-foreground: 210 40% 92%;
+
+    --primary: 170 80% 50%;
+    --primary-foreground: 215 35% 7%;
+
+    --secondary: 215 25% 16%;
+    --secondary-foreground: 210 40% 92%;
+
+    --muted: 215 20% 14%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 35 95% 55%;
+    --accent-foreground: 215 35% 7%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 145 65% 45%;
+    --success-foreground: 215 35% 7%;
+
+    --warning: 45 90% 55%;
+    --warning-foreground: 215 35% 7%;
+
+    --border: 215 20% 18%;
+    --input: 215 25% 14%;
+    --ring: 170 80% 50%;
+
+    --radius: 0.75rem;
+
+    --gradient-cyber: linear-gradient(135deg, hsl(170 80% 50%), hsl(200 80% 50%));
+    --gradient-strength-weak: linear-gradient(90deg, hsl(0 70% 55%), hsl(20 80% 55%));
+    --gradient-strength-medium: linear-gradient(90deg, hsl(0 70% 55%), hsl(35 95% 55%));
+    --gradient-strength-strong: linear-gradient(90deg, hsl(0 70% 55%), hsl(35 95% 55%), hsl(145 65% 45%));
+    --gradient-strength-excellent: linear-gradient(90deg, hsl(170 80% 50%), hsl(145 65% 45%));
+
+    --shadow-cyber: 0 0 30px hsl(170 80% 50% / 0.15);
+    --shadow-glow: 0 0 20px hsl(170 80% 50% / 0.3);
+
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-family: var(--font-body);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .text-glow {
+    text-shadow: 0 0 10px hsl(170 80% 50% / 0.5), 0 0 30px hsl(170 80% 50% / 0.2);
+  }
+  .bg-cyber-gradient {
+    background: var(--gradient-cyber);
+  }
+  .shadow-cyber {
+    box-shadow: var(--shadow-cyber);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
